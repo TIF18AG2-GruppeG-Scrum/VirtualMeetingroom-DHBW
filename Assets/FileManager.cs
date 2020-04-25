@@ -17,6 +17,7 @@ public class FileManager : MonoBehaviour
     private string VideoDocpath;
     private string DirectoryPath;
     public RawImage RawImage;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +25,17 @@ public class FileManager : MonoBehaviour
         FileBrowser.SetExcludedExtensions(".lnk",".tmp",".zip",".rar",".exe");
         FileBrowser.AddQuickLink("Users", "c:\\Users");
         DirectoryPath = Application.dataPath + "/Resources/Boards/"+DestFolder;
+
         if (PDFIcon != null)
         {
             FileBrowser.AddExtension(".pdf", PDFIcon);
         }
       
+        if(player != null && !player.GetComponent<PlayerAuthentification>().IsAdmin)
+        {
+            gameObject.SetActive(false);
+
+        }
 
     }
 
