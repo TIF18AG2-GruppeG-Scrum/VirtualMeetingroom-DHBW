@@ -107,8 +107,9 @@ public class FileManager : MonoBehaviour
     {
         try
         {
-            
-            VideoDocpath = Directory.GetFiles(DirectoryPath + "/").FirstOrDefault();
+          
+             VideoDocpath = Directory.GetFiles(DirectoryPath + "/").FirstOrDefault();
+         
 
             if (VideoDocpath != null)
             {
@@ -172,7 +173,7 @@ public class FileManager : MonoBehaviour
        
         try
         {
-            if(VideoDocpath == null)
+            
              VideoDocpath = Directory.GetFiles(DirectoryPath + "/").FirstOrDefault();
 
             if (VideoDocpath != null)
