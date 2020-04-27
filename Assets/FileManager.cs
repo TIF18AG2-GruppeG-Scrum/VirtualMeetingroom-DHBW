@@ -49,6 +49,17 @@ public class FileManager : MonoBehaviour
         }
 
     }
+    public void PauseVideo()
+    {
+        try
+        {
+            videoPlayer.Pause();
+        }
+        catch(Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+    }
 
     private  IEnumerator UploadVideo()
     {
@@ -166,7 +177,8 @@ public class FileManager : MonoBehaviour
 
             if (VideoDocpath != null)
             {
-                videoPlayer.url = VideoDocpath;
+                if(videoPlayer.url != VideoDocpath)
+                     videoPlayer.url = VideoDocpath;
 
                 if(videoPlayer.url != VideoDocpath)
                 {
