@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
             MousePointerToggled = !MousePointerToggled;
         }
 
-        if (Input.GetAxis("Vertical") != 0|| Input.GetAxis("Horizontal") != 0)
+      /* if (Input.GetAxis("Vertical") != 0|| Input.GetAxis("Horizontal") != 0)
         {
             transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"))*Speed*Time.deltaTime);
-        }
+        }*/
     }
 }
