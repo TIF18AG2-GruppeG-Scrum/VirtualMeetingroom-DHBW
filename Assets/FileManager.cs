@@ -30,8 +30,8 @@ public class FileManager : MonoBehaviour
         {
             FileBrowser.AddExtension(".pdf", PDFIcon);
         }
-      
-        if(player != null && !player.GetComponent<PlayerAuthentification>().IsAdmin)
+     
+        if(player != null && !PlayerAuthentification.IsAdmin)
         {
             gameObject.SetActive(false);
 
