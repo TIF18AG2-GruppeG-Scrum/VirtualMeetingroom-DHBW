@@ -38,7 +38,16 @@ public class FileManager : MonoBehaviour
         }
 
     }
+    private void Update()
+    {
+        
+            if (player != null && !PlayerAuthentification.IsAdmin)
+            {
+                gameObject.SetActive(false);
 
+            }
+        
+    }
     // Update is called once per frame
     public void UploadVideoCoroutine()
     {

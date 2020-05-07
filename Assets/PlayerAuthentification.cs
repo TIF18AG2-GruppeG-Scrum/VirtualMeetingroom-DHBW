@@ -18,6 +18,7 @@ public class PlayerAuthentification : MonoBehaviour
     public static string Name;
     public static string Password;
     public static string IpAdress;
+  
 
     private void SetIsAdmin()
     {
@@ -37,8 +38,11 @@ public class PlayerAuthentification : MonoBehaviour
 
     public void CheckAdminInput()
     {
+    
+       
         if (!string.IsNullOrWhiteSpace(adminName.text) && !string.IsNullOrWhiteSpace(adminPassword.text))
         {
+          
             Name = adminName.text;
             Password = adminPassword.text;
 
@@ -46,6 +50,7 @@ public class PlayerAuthentification : MonoBehaviour
             {
                 SetIsAdmin();
                 LoadRoom();
+                
             }
             else
             {
@@ -55,12 +60,20 @@ public class PlayerAuthentification : MonoBehaviour
         }
     }
 
+  
+
     public void EnterGuest()
     {
+        bool hadLoggedIn = Name != null;
+
         if (!string.IsNullOrWhiteSpace(guestName.text))
         {
+            SetIsGuest();
             Name = guestName.text;
-            LoadRoom();
+            guestName.text = "";
+            if(!hadLoggedIn)
+             LoadRoom();
+           
         }
     }
 

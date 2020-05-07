@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float Speed = 50f;
     private bool MousePointerToggled = true;
-   
-
+    public GameObject menu;
+    public GameObject camMov;
+    private bool MenuToggled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Application.LoadLevel(1);
+            if (!MenuToggled)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                menu.SetActive(true);
+                camMov.SetActive(false);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                menu.SetActive(false);
+                camMov.SetActive(true);
+            }
+
+            MenuToggled = !MenuToggled;
+          
+           // Application.LoadLevel(1);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftAlt))
