@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float Speed = 50f;
     private bool MousePointerToggled = true;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Application.LoadLevel(1);
+        }
+
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             if(MousePointerToggled)
@@ -24,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
             MousePointerToggled = !MousePointerToggled;
         }
+
 
       /* if (Input.GetAxis("Vertical") != 0|| Input.GetAxis("Horizontal") != 0)
         {

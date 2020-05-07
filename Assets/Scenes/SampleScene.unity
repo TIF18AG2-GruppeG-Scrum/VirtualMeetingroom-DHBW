@@ -1398,7 +1398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b4639d5fefe774698a5da45946269c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAdmin: 1
+  adminName: {fileID: 0}
+  adminPassword: {fileID: 0}
+  guestName: {fileID: 0}
+  ipAdress: {fileID: 0}
+  oldPass: {fileID: 0}
+  newPass: {fileID: 0}
 --- !u!1 &132794848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,13 +4693,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497083735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 2.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1295403697}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.81482, y: -0.00032806}
@@ -5845,13 +5850,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564670735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 414709924}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1.6000061, y: -0.8999939}
@@ -18705,7 +18710,7 @@ MonoBehaviour:
     m_Bits: 1
   lockCamera: 0
   rightOffset: 0
-  defaultDistance: -55
+  defaultDistance: -58
   height: 180
   smoothFollow: 0
   xMouseSensitivity: 3
@@ -19508,7 +19513,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b4639d5fefe774698a5da45946269c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAdmin: 1
+  adminName: {fileID: 0}
+  adminPassword: {fileID: 0}
+  guestName: {fileID: 0}
+  ipAdress: {fileID: 0}
+  oldPass: {fileID: 0}
+  newPass: {fileID: 0}
 --- !u!114 &1863121633
 MonoBehaviour:
   m_ObjectHideFlags: 0
