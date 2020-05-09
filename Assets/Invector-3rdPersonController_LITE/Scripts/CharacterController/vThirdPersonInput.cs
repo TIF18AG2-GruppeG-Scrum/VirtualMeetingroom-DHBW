@@ -78,7 +78,7 @@ namespace Invector.vCharacterController
             CameraInput();
             SprintInput();
             StrafeInput();
-            JumpInput();
+        //   JumpInput();
         }
 
         public virtual void MoveInput()

@@ -23,8 +23,9 @@ public class FileManager : MonoBehaviour
     void Start()
     {
         FileBrowser.SetExcludedExtensions(".lnk",".tmp",".zip",".rar",".exe");
-        FileBrowser.AddQuickLink("Users", "c:\\Users");
+        FileBrowser.AddQuickLink("usr", "c:\\");
         DirectoryPath = Application.dataPath + "/Resources/Boards/"+DestFolder;
+        
 
         if (PDFIcon != null)
         {
@@ -89,8 +90,8 @@ public class FileManager : MonoBehaviour
              
                 videoPlayer.Stop();
                 ClearFolder();
-                File.Copy(FileBrowser.Result, DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('\\') + 1));
-                VideoDocpath = DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('\\') + 1);
+                File.Copy(FileBrowser.Result, DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('/') + 1));
+                VideoDocpath = DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('/') + 1);
             }
 
             catch (Exception e)
@@ -119,10 +120,10 @@ public class FileManager : MonoBehaviour
           
              VideoDocpath = Directory.GetFiles(DirectoryPath + "/").FirstOrDefault();
          
-
+           
             if (VideoDocpath != null)
             {
-               
+              
                 Application.OpenURL(VideoDocpath);
             }
 
@@ -158,11 +159,9 @@ public class FileManager : MonoBehaviour
         {
             try
             {
-                
                 ClearFolder();
-                File.Copy(FileBrowser.Result, DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('\\') + 1));
-                VideoDocpath = DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('\\') + 1);
-
+                File.Copy(FileBrowser.Result, DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('/') + 1));
+                VideoDocpath = DirectoryPath + "/" + FileBrowser.Result.Substring(FileBrowser.Result.LastIndexOf('/') + 1);
             }
 
             catch (Exception e)

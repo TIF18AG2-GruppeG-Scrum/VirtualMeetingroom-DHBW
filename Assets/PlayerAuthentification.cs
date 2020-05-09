@@ -18,7 +18,9 @@ public class PlayerAuthentification : MonoBehaviour
     public static string Name;
     public static string Password;
     public static string IpAdress;
-  
+    public Text nameLabel;
+    
+
 
     private void SetIsAdmin()
     {
@@ -44,6 +46,8 @@ public class PlayerAuthentification : MonoBehaviour
         {
           
             Name = adminName.text;
+            if (nameLabel != null)
+            nameLabel.text = Name;
             Password = adminPassword.text;
 
             if (readAdminTextFile().Equals(Password))
@@ -60,6 +64,13 @@ public class PlayerAuthentification : MonoBehaviour
         }
     }
 
+    void Start(){
+        
+        if (nameLabel != null)
+        nameLabel.text = Name;
+
+    }
+
   
 
     public void EnterGuest()
@@ -71,6 +82,8 @@ public class PlayerAuthentification : MonoBehaviour
             SetIsGuest();
             Name = guestName.text;
             guestName.text = "";
+            if (nameLabel != null)
+            nameLabel.text = Name;
             if(!hadLoggedIn)
              LoadRoom();
            
@@ -81,7 +94,7 @@ public class PlayerAuthentification : MonoBehaviour
     {
         if (readAdminTextFile().Equals(oldPass.text))
         {
-            File.WriteAllText(Application.dataPath + @"\Admin.txt", newPass.text);
+            File.WriteAllText(Application.dataPath + @"/Admin.txt", newPass.text);
         }
         else
         {
@@ -96,6 +109,6 @@ public class PlayerAuthentification : MonoBehaviour
 
     private string readAdminTextFile()
     {
-        return File.ReadAllText(Application.dataPath + @"\Admin.txt");
+        return File.ReadAllText(Application.dataPath + @"/Admin.txt");
     }
 }
