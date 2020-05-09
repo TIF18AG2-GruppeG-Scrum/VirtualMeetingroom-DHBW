@@ -47,7 +47,10 @@ public class PlayerAuthentification : MonoBehaviour
           
             Name = adminName.text;
             if (nameLabel != null)
-            nameLabel.text = Name;
+            {
+                nameLabel.text = Name;
+                nameLabel.color = Color.green;
+            }
             Password = adminPassword.text;
 
             if (readAdminTextFile().Equals(Password))
@@ -65,9 +68,18 @@ public class PlayerAuthentification : MonoBehaviour
     }
 
     void Start(){
-        
+
         if (nameLabel != null)
-        nameLabel.text = Name;
+        {
+            nameLabel.text = Name;
+            if (IsAdmin)
+            {
+                nameLabel.color = Color.green;
+            }
+            else{
+                nameLabel.color = Color.red;
+            }
+        }
 
     }
 
@@ -83,7 +95,10 @@ public class PlayerAuthentification : MonoBehaviour
             Name = guestName.text;
             guestName.text = "";
             if (nameLabel != null)
-            nameLabel.text = Name;
+            {
+                nameLabel.text = Name;
+                nameLabel.color = Color.red;
+            }
             if(!hadLoggedIn)
              LoadRoom();
            

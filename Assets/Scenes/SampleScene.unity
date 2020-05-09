@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.49549735, g: 0.80786216, b: 1.0696845, a: 1}
+  m_IndirectSpecularColor: {r: 0.4954099, g: 0.80780864, b: 1.06969, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15751,7 +15751,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048817656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.90909094, y: 0.90909094, z: 0.90909094}
   m_Children:
   - {fileID: 653999556}
@@ -15760,8 +15760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 202.7}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 211.41}
+  m_SizeDelta: {x: 142.01, y: 30.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048817658
 MonoBehaviour:
@@ -28643,7 +28643,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   groundMinDistance: 10
-  groundMaxDistance: 10
+  groundMaxDistance: 12
   slopeLimit: 30
 --- !u!95 &1863121630
 Animator:
