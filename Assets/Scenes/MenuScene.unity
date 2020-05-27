@@ -2893,6 +2893,7 @@ MonoBehaviour:
   ipAdress: {fileID: 855734879}
   oldPass: {fileID: 566354315}
   newPass: {fileID: 1752197550}
+  nameLabel: {fileID: 0}
 --- !u!1 &797395272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +3262,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Tastenbelegung\n\nW\t=  Vorw\xE4rts bewegen\nA\t= Nach links drehen\nS\t=
     R\xFCckw\xE4rts bewegen\nD\t= Nach rechts drehen\nESC\t= Men\xFC aus/an\nalt\t=
-    Mauszeiger aktivieren\nShift\t= Sprinten\n"
+    Mauszeiger aktivieren/deaktivieren\nShift\t= Sprinten\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
