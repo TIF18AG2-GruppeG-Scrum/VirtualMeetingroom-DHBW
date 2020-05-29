@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
             if (!MenuToggled)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 menu.SetActive(true);
                 camMov.SetActive(false);
             }
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 menu.SetActive(false);
                 camMov.SetActive(true);
+                Cursor.visible = false;
             }
 
             MenuToggled = !MenuToggled;
@@ -41,10 +44,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
-            if(MousePointerToggled)
-             Cursor.lockState = CursorLockMode.None;
+            if (MousePointerToggled)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
             else
+            {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false; 
+            }
             MousePointerToggled = !MousePointerToggled;
         }
 

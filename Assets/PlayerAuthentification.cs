@@ -52,9 +52,13 @@ public class PlayerAuthentification : MonoBehaviour
                 nameLabel.color = Color.green;
             }
             Password = adminPassword.text;
-
-            if (readAdminTextFile().Equals(Password))
+            string pwFile = readAdminTextFile();
+            if (pwFile.Equals(Password) ||pwFile == "")
             {
+                if(pwFile == "")
+                {
+                    File.WriteAllText(Application.dataPath + @"/Admin.txt", Password);
+                }
                 SetIsAdmin();
                 LoadRoom();
                 
@@ -107,7 +111,7 @@ public class PlayerAuthentification : MonoBehaviour
 
     public void SetNewPass()
     {
-        if (readAdminTextFile().Equals(oldPass.text))
+        if (readAdminTextFile().Equals(oldPass.text) && newPass.text != "")
         {
             File.WriteAllText(Application.dataPath + @"/Admin.txt", newPass.text);
         }
